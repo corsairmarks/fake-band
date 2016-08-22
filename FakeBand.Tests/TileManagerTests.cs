@@ -1,8 +1,9 @@
-﻿using FakeBand.Tests.Utils;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using FakeBand.Tests.Utils;
 using Microsoft.Band;
 using Microsoft.Band.Tiles;
-using System;
-using System.Collections.Generic;
 using Windows.UI.Xaml.Media.Imaging;
 using Xunit;
 
@@ -16,7 +17,7 @@ namespace FakeBand.Tests
         // remove all apps tiles...
 
         [Fact]
-        public async void TileManager_GetTiles()
+        public async Task TileManager_GetTiles()
         {
             var bandClient = await TestUtils.GetBandClientAsync();
 
@@ -26,7 +27,7 @@ namespace FakeBand.Tests
         }
 
         [Fact]
-        public async void TileManager_SetNewTile()
+        public async Task TileManager_SetNewTile()
         {
             var bandClient = await TestUtils.GetBandClientAsync();
 
